@@ -1,7 +1,7 @@
 /* *************************************************
 *  Name: Nikhil Prabhu
 *  Assignment: Simple Stack
-*  Purpose:
+*  Purpose: Hold header files for main
 *
 ************************************************* */
 

@@ -1,6 +1,11 @@
 /* *************************************************
 *  Name: Nikhil Prabhu
 *  Assignment: Simple Stack
-*  Purpose:
+*  Purpose: Demonstrate a simple stack in C++
 *
 ************************************************* */
+
+
+
+
+
