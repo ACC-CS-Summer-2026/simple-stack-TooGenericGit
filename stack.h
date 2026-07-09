@@ -9,6 +9,8 @@
 #define ASSIGNMENT4_STACK_H
 #define STACKSIZE 10
 
+#include <string>
+
 class Stack {
 
 public:

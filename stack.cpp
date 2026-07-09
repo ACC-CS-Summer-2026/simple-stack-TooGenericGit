@@ -36,45 +36,53 @@ Stack::~Stack() {
 
 int Stack::pop() {
     /* *************************************************
-    Returns the radius.
+    Returns the top value of stack and then removes it
     @param na : na
-    @return (int) : the radius of the Circle
-    @exception na : na
+    @return (int) : the value popped
+    @exception std::string : if stack underflow occurs
     @note na
     * ************************************************* */
+    if (isEmpty()) {
+        throw std::string("Underflow detected");
+    }
 
+    int popResult = stack[top];
+    top--;
 
-
-    return ;
+    return popResult;
 }
 
 int Stack::peek() {
     /* *************************************************
-    Returns the radius.
+    Returns the top value of the stack without removing
     @param na : na
-    @return (int) : the radius of the Circle
-    @exception na : na
+    @return (int) : the value at top index
+    @exception std::string : if stack underflow occurs
     @note na
     * ************************************************* */
+    if (isEmpty()) {
+        throw std::string("Underflow detected");
+    }
 
-
-
-    return ;
+    return stack[top];
 }
 
 
-int Stack::push() {
+bool Stack::push(int pushValue) {
     /* *************************************************
-    Returns the radius.
-    @param na : na
-    @return (int) : the radius of the Circle
+    Insert value at the top of the stack.
+    @param (int) : integer value to push onto stack
+    @return (bool) : true if pushed, false if overflow
     @exception na : na
     @note na
     * ************************************************* */
+    if (top >= (STACKSIZE - 1)) {
+        return false;
+    }
 
-
-
-    return ;
+    top++;
+    stack[top] = pushValue;
+    return true;
 }
 
 bool Stack::isEmpty() {
